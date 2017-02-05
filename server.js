@@ -7,7 +7,8 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.get('/:date', function (req, res) {
+app.get('/timestamp/:date', function (req, res) {
+
   res.send(req.params);
 });
 
