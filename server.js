@@ -6,11 +6,11 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.get('/timestamp/:date', function (req, res) {
+app.get('/:date', function (req, res) {
     var date = req.params.date;
     var newDate = new Date(date);
     
-    var natural = moment(date,"MMMM D, YYYY",true);
+    var natural = moment(date,"MMMM D, YYYY");
     var unix = moment(date, "X",true);
     
     if(date == unix.format("X")){
